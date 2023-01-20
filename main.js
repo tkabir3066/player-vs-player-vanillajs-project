@@ -10,6 +10,9 @@ const p1BtnElm = document.querySelector(".p1Btn");
 const p2BtnElm = document.querySelector(".p2Btn");
 const resetBtnElm = document.querySelector("#resetBtn");
 
+let p1Score = 0;
+let p2Score = 0;
+
 function validateInput(inputVal) {
   let isInvalid = false;
   // NaN !== NaN results true if input is not a real number
@@ -44,4 +47,21 @@ formElm.addEventListener("submit", (e) => {
   //reset the input
   resetInput();
   console.log(inputVal);
+});
+
+// handling players click
+
+p1BtnElm.addEventListener("click", (e) => {
+  p1Score++;
+
+  // setting on p1 score
+  p1ScoreElm.textContent = p1Score;
+});
+p2BtnElm.addEventListener("click", (e) => {
+  // memory data update
+  p2Score++;
+
+  // DOM  update
+  // setting on p2 score
+  p2ScoreElm.textContent = p2Score;
 });
