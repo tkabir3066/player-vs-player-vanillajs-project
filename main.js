@@ -38,6 +38,9 @@ formElm.addEventListener("submit", (e) => {
   if (isInvalid) {
     return;
   }
+
+  // setting winning score
+  winScoreElm.textContent = inputVal;
   //reset the input
   resetInput();
   console.log(inputVal);
